@@ -2,15 +2,14 @@
     "name": "shopify-3p-component-library",
     "version": "0.0.1",
     "description": "A third party component library for Shopify Hydrogen.",
-    "main": "dist/cjs/index.js",
-    "module": "dist/esm/index.js",
+    "main": "dist/mjs/index.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
-        "build:esm": "tsc",
-        "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+        "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs && ./create-hybrid-package",
+        "build:esm": "tsc --module esnext --outDir dist/mjs --target esnext",
+        "build:cjs": "tsc --module commonjs --outDir dist/cjs --target es2015"
     },
     "author": "",
     "license": "ISC",
