@@ -16,7 +16,6 @@
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noUnusedLocals": true,
-        "outDir": "dist/cjs",
         "sourceMap": true,
         "strict": true,
         "target": "ES2018"
