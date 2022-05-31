@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "declaration": true,
         "esModuleInterop": true,
@@ -12,7 +11,7 @@
         "types": [
             "node"
         ],
-        "module": "commonjs",
+        "module": "esnext",
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noUnusedLocals": true,
