@@ -5,22 +5,14 @@
         "esModuleInterop": true,
         "jsx": "react",
         "lib": [
-            "dom",
-            "esnext"
+            "ESNext",
+            "DOM"
         ],
-        "types": [
-            "node"
-        ],
-        "module": "esnext",
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noUnusedLocals": true,
         "sourceMap": true,
         "strict": true,
-        "target": "ES2018"
+        "target": "ES2018",
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx"
-    ],
 }

@@ -4,11 +4,13 @@
     "description": "A third party component library for Shopify Hydrogen.",
     "main": "dist/esnext/index.js",
     "files": [
-        "dist"
+        "dist",
+        "plugin.js"
     ],
     "scripts": {
-        "build": "rm -rf dist/ && npm run build:esm",
-        "build:esm": "tsc --module esnext --outDir dist/esnext --target esnext"
+        "build": "rm -rf dist/ && npm run build:plugin:cjs && npm run build:esm",
+        "build:plugin:cjs": "tsc --p tsconfig.plugin.cjs.json",
+        "build:esm": "tsc --p tsconfig.esm.json"
     },
     "author": "",
     "license": "ISC",
@@ -21,7 +23,8 @@
         "@types/react": "^18.0.9",
         "@types/react-dom": "^18.0.5",
         "type-fest": "^2.13.0",
-        "typescript": "^4.7.2"
+        "typescript": "^4.7.2",
+        "vite": "^2.9.0"
     },
     "peerDependencies": {
         "@shopify/hydrogen": ">=0.21.0",
